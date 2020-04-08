@@ -18,10 +18,10 @@ public class OcLadeApplication {
 		
 		SpringApplication.run(OcLadeApplication.class, args);
 		
-		Utilisateur nouvelUtilisateur = new Utilisateur();
-		nouvelUtilisateur.setIdUtilisateur(1L);
-		nouvelUtilisateur.setPrenomUtilisateur("Federico");
-		nouvelUtilisateur.setNomUtilisateur("Desmoulin");
+//		Utilisateur nouvelUtilisateur = new Utilisateur();
+//		nouvelUtilisateur.setIdUtilisateur(1L);
+//		nouvelUtilisateur.setPrenomUtilisateur("Federico");
+//		nouvelUtilisateur.setNomUtilisateur("Desmoulin");
 		
 		Utilisateur utilisateur = new Utilisateur();
 		
@@ -35,7 +35,7 @@ public class OcLadeApplication {
 		
 		Transaction transaction = session.beginTransaction();
 		
-		session.save(nouvelUtilisateur);
+//		session.save(nouvelUtilisateur);
 		
 		utilisateur = (Utilisateur) session.get(Utilisateur.class, 1L);
 		

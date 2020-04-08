@@ -2,7 +2,7 @@ package com.oc.moko.oc_lade.model;
 
 import javax.persistence.Column;
 
-//import java.ustil.UUID;
+import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,7 +16,7 @@ public class Utilisateur {
 	
 	@Id
 	@Column(name="id_utilisateur")
-	private Long idUtilisateur;
+	private UUID idUtilisateur;
 	@Column(name="prenom_utilisateur")
 	private String prenomUtilisateur;
 	@Column(name="nom_utilisateur")
@@ -26,7 +26,7 @@ public class Utilisateur {
 	}
 
 	public Utilisateur(
-		@JsonProperty("idUtilisateur") Long idUtilisateur,
+		@JsonProperty("idUtilisateur") UUID idUtilisateur,
 		@JsonProperty("prenomUtilisateur") String prenomUtilisateur,
 		@JsonProperty("nomUtilisateur") String nomUtilisateur
 	) {
@@ -35,11 +35,11 @@ public class Utilisateur {
 		this.nomUtilisateur = nomUtilisateur;
 	}
 
-	public Long getIdUtilisateur() {
+	public UUID getIdUtilisateur() {
 		return idUtilisateur;
 	}
 	
-	public void setIdUtilisateur(Long idUtilisateur) {
+	public void setIdUtilisateur(UUID idUtilisateur) {
 		this.idUtilisateur = idUtilisateur;
 	}
 	
