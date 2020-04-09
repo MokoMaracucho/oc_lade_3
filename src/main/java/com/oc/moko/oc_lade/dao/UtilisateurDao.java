@@ -8,7 +8,7 @@ public interface UtilisateurDao {
 	
 	int insertUtilisateur(UUID id, Utilisateur utilisateur);
 	
-	default int addUtilisateur(Utilisateur utilisateur) {
+	default int insertUtilisateur(Utilisateur utilisateur) {
 		UUID id = UUID.randomUUID();
 		return insertUtilisateur(id, utilisateur);
 	}
