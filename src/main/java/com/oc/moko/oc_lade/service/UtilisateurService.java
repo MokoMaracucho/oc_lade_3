@@ -1,5 +1,7 @@
 package com.oc.moko.oc_lade.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -19,5 +21,9 @@ public class UtilisateurService {
 
 	public int addUtilisateur(Utilisateur utilisateur) {
 		return utilisateurDao.insertUtilisateur(utilisateur);
+	}
+	
+	public List<Utilisateur> getTousUtilisateurs() {
+		return utilisateurDao.selectTousUtilisateurs();
 	}
 }

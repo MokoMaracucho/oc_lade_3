@@ -26,9 +26,9 @@ public class Utilisateur {
 	}
 
 	public Utilisateur(
-		@JsonProperty("idUtilisateur") UUID idUtilisateur,
-		@JsonProperty("prenomUtilisateur") String prenomUtilisateur,
-		@JsonProperty("nomUtilisateur") String nomUtilisateur
+		@JsonProperty("id_utilisateur") UUID idUtilisateur,
+		@JsonProperty("prenom_utilisateur") String prenomUtilisateur,
+		@JsonProperty("nom_utilisateur") String nomUtilisateur
 	) {
 		this.idUtilisateur = idUtilisateur;
 		this.prenomUtilisateur = prenomUtilisateur;

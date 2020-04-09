@@ -23,24 +23,24 @@ public class OcLadeApplication {
 //		nouvelUtilisateur.setPrenomUtilisateur("Federico");
 //		nouvelUtilisateur.setNomUtilisateur("Desmoulin");
 		
-		Utilisateur utilisateur = new Utilisateur();
+//		Utilisateur utilisateur = new Utilisateur();
 		
-		Configuration configuration = new Configuration().configure().addAnnotatedClass(Utilisateur.class);
+//		Configuration configuration = new Configuration().configure().addAnnotatedClass(Utilisateur.class);
 		
-		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
+//		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
 		
-		SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+//		SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 		
-		Session session = sessionFactory.openSession();
+//		Session session = sessionFactory.openSession();
 		
-		Transaction transaction = session.beginTransaction();
+//		Transaction transaction = session.beginTransaction();
 		
 //		session.save(nouvelUtilisateur);
 		
-		utilisateur = (Utilisateur) session.get(Utilisateur.class, 1L);
+//		utilisateur = (Utilisateur) session.get(Utilisateur.class, 1L);
 		
-		transaction.commit();
+//		transaction.commit();
 		
-		System.out.println(utilisateur);
+//		System.out.println(utilisateur);
 	}
 }
