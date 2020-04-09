@@ -19,7 +19,7 @@ public interface UtilisateurDao {
 	
 	Optional<Utilisateur> selectUtilisateurById(UUID id);
 	
-	int deleteUtilisateur(UUID idUtyilisateur);
+	int deleteUtilisateurById(UUID idUtyilisateur);
 	
-	int updateUtilisateurById(UUID id);
+	int updateUtilisateurById(UUID id, Utilisateur utilisateur);
 }

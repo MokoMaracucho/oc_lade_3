@@ -32,4 +32,12 @@ public class UtilisateurService {
 	public Optional<Utilisateur> getUtilisateurById(UUID idUtilisateur) {
 		return utilisateurDao.selectUtilisateurById(idUtilisateur);
 	}
+	
+	public int deleteUtilisateurById(UUID idUtilisateur) {
+		return utilisateurDao.deleteUtilisateurById(idUtilisateur);
+	}
+	
+	public int updateUtilisateurById(UUID idUtilisateur, Utilisateur utilisateurToUpdate) {
+		return utilisateurDao.updateUtilisateurById(idUtilisateur, utilisateurToUpdate);
+	}
 }

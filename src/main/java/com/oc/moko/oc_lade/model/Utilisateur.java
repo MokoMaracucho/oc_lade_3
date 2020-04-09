@@ -7,6 +7,7 @@ import java.util.UUID;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -16,10 +17,13 @@ public class Utilisateur {
 	
 	@Id
 	@Column(name="id_utilisateur")
+	@NotBlank
 	private UUID idUtilisateur;
 	@Column(name="prenom_utilisateur")
+	@NotBlank
 	private String prenomUtilisateur;
 	@Column(name="nom_utilisateur")
+	@NotBlank
 	private String nomUtilisateur;
 
 	public Utilisateur() {
