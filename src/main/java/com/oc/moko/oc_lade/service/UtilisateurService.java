@@ -1,6 +1,8 @@
 package com.oc.moko.oc_lade.service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -25,5 +27,9 @@ public class UtilisateurService {
 	
 	public List<Utilisateur> getTousUtilisateurs() {
 		return utilisateurDao.selectTousUtilisateurs();
+	}
+	
+	public Optional<Utilisateur> getUtilisateurById(UUID idUtilisateur) {
+		return utilisateurDao.selectUtilisateurById(idUtilisateur);
 	}
 }

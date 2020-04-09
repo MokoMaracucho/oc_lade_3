@@ -2,6 +2,7 @@ package com.oc.moko.oc_lade.dao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.stereotype.Repository;
@@ -22,5 +23,22 @@ public class UtilisateurDataAccessService implements UtilisateurDao {
 	@Override
 	public List<Utilisateur> selectTousUtilisateurs() {
 		return listUtilisateurs;
+	}
+
+	@Override
+	public Optional<Utilisateur> selectUtilisateurById(UUID idUtilisateur) {
+		return listUtilisateurs.stream()
+				.filter(utilisateur -> utilisateur.getIdUtilisateur().equals(idUtilisateur))
+				.findFirst();
+	}
+
+	@Override
+	public int deleteUtilisateur(UUID idUtyilisateur) {
+		return 0;
+	}
+
+	@Override
+	public int updateUtilisateurById(UUID id) {
+		return 0;
 	}
 }

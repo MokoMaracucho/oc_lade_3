@@ -1,6 +1,7 @@
 package com.oc.moko.oc_lade.dao;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import com.oc.moko.oc_lade.model.Utilisateur;
@@ -15,4 +16,10 @@ public interface UtilisateurDao {
 	}
 	
 	List<Utilisateur> selectTousUtilisateurs();
+	
+	Optional<Utilisateur> selectUtilisateurById(UUID id);
+	
+	int deleteUtilisateur(UUID idUtyilisateur);
+	
+	int updateUtilisateurById(UUID id);
 }
