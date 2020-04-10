@@ -5,6 +5,7 @@ import javax.persistence.Column;
 import java.util.UUID;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
@@ -16,6 +17,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Utilisateur {
 	
 	@Id
+	@GeneratedValue
 	@Column(name="id_utilisateur")
 	@NotBlank
 	private UUID idUtilisateur;
@@ -31,8 +33,11 @@ public class Utilisateur {
 
 	public Utilisateur(
 		@JsonProperty("id_utilisateur") UUID idUtilisateur,
+//		UUID idUtilisateur,
 		@JsonProperty("prenom_utilisateur") String prenomUtilisateur,
+//		String prenomUtilisateur,
 		@JsonProperty("nom_utilisateur") String nomUtilisateur
+//		String nomUtilisateur
 	) {
 		this.idUtilisateur = idUtilisateur;
 		this.prenomUtilisateur = prenomUtilisateur;

@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -12,6 +14,7 @@ import com.oc.moko.oc_lade.dao.UtilisateurDao;
 import com.oc.moko.oc_lade.model.Utilisateur;
 
 @Service
+@Transactional // codejava
 public class UtilisateurService {
 
 	private final UtilisateurDao utilisateurDao;

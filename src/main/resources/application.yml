@@ -1,0 +1,6 @@
+app:
+  datasource:
+    jdbc-url: jdbc:mysql://localhost:3306/db_lade
+    username: adm_lade
+    password: LAde33.
+    maximum-pool-size: 30
