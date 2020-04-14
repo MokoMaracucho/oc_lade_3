@@ -5,12 +5,18 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
+import com.oc.moko.oc_lade.hibernate.HibernateUtil;
 import com.oc.moko.oc_lade.model.Utilisateur;
 
 @Repository("MySQL")
 public class UtilisateurDataAccessService implements UtilisateurDao {
+	
+
+	
+	Session session = HibernateUtil.getSessionFactory().openSession();
 
 	private static List<Utilisateur> listUtilisateurs = new ArrayList<>();
 
