@@ -45,41 +45,73 @@ public class Utilisateur {
 	@Column(name="date_inscription_utilisateur")
 	private Timestamp dateInscriptionUtilisateur;
 
-	@OneToMany(mappedBy="Site")
-	private List<Site> listeSites;
-	@OneToMany(mappedBy="Secteur")
-	private List<Secteur> listeSecteurs;
-	@OneToMany(mappedBy="Voie")
-	private List<Voie> listeVoies;
-	@OneToMany(mappedBy="Longueur")
-	private List<Longueur> listeLongueurs;
-	@OneToMany(mappedBy="Commentaire")
-	private List<Commentaire> listeCommentaires;
-	@OneToMany(mappedBy="Topo")
-	private List<Topo> listeTopos;
-	@OneToMany(mappedBy="ReservationTopo")
-	private List<ReservationTopo> listeReservationTopo;
+//	@OneToMany(mappedBy="Site")
+//	private List<Site> listeSites;
+//	@OneToMany(mappedBy="Secteur")
+//	private List<Secteur> listeSecteurs;
+//	@OneToMany(mappedBy="Voie")
+//	private List<Voie> listeVoies;
+//	@OneToMany(mappedBy="Longueur")
+//	private List<Longueur> listeLongueurs;
+//	@OneToMany(mappedBy="Commentaire")
+//	private List<Commentaire> listeCommentaires;
+//	@OneToMany(mappedBy="Topo")
+//	private List<Topo> listeTopos;
+//	@OneToMany(mappedBy="ReservationTopo")
+//	private List<ReservationTopo> listeReservationTopo;
+
+	public Utilisateur(
+		@NotBlank UUID idUtilisateur,
+		@NotBlank String prenomUtilisateur,
+		@NotBlank String nomUtilisateur,
+		@NotBlank String emailUtilisateur,
+		@NotBlank String motDePasseUtilisateur,
+		@NotBlank Privilege privilegeUtilisateur,
+		@NotBlank Timestamp dateInscriptionUtilisateur
+//		List<Site> listeSites,
+//		List<Secteur> listeSecteurs,
+//		List<Voie> listeVoies,
+//		List<Longueur> listeLongueurs,
+//		List<Commentaire> listeCommentaires,
+//		List<Topo> listeTopos,
+//		List<ReservationTopo> listeReservationTopo
+	) {
+		this.idUtilisateur = idUtilisateur;
+		this.prenomUtilisateur = prenomUtilisateur;
+		this.nomUtilisateur = nomUtilisateur;
+		this.emailUtilisateur = emailUtilisateur;
+		this.motDePasseUtilisateur = motDePasseUtilisateur;
+		this.privilegeUtilisateur = privilegeUtilisateur;
+		this.dateInscriptionUtilisateur = dateInscriptionUtilisateur;
+//		this.listeSites = listeSites;
+//		this.listeSecteurs = listeSecteurs;
+//		this.listeVoies = listeVoies;
+//		this.listeLongueurs = listeLongueurs;
+//		this.listeCommentaires = listeCommentaires;
+//		this.listeTopos = listeTopos;
+//		this.listeReservationTopo = listeReservationTopo;
+	}
 
 	public UUID getIdUtilisateur() {
 		return idUtilisateur;
 	}
-	
+
 	public void setIdUtilisateur(UUID idUtilisateur) {
 		this.idUtilisateur = idUtilisateur;
 	}
-	
+
 	public String getPrenomUtilisateur() {
 		return prenomUtilisateur;
 	}
-	
+
 	public void setPrenomUtilisateur(String prenomUtilisateur) {
 		this.prenomUtilisateur = prenomUtilisateur;
 	}
-	
+
 	public String getNomUtilisateur() {
 		return nomUtilisateur;
 	}
-	
+
 	public void setNomUtilisateur(String nomUtilisateur) {
 		this.nomUtilisateur = nomUtilisateur;
 	}
@@ -115,4 +147,60 @@ public class Utilisateur {
 	public void setDateInscriptionUtilisateur(Timestamp dateInscriptionUtilisateur) {
 		this.dateInscriptionUtilisateur = dateInscriptionUtilisateur;
 	}
+
+//	public List<Site> getListeSites() {
+//		return listeSites;
+//	}
+//
+//	public void setListeSites(List<Site> listeSites) {
+//		this.listeSites = listeSites;
+//	}
+//
+//	public List<Secteur> getListeSecteurs() {
+//		return listeSecteurs;
+//	}
+//
+//	public void setListeSecteurs(List<Secteur> listeSecteurs) {
+//		this.listeSecteurs = listeSecteurs;
+//	}
+//
+//	public List<Voie> getListeVoies() {
+//		return listeVoies;
+//	}
+//
+//	public void setListeVoies(List<Voie> listeVoies) {
+//		this.listeVoies = listeVoies;
+//	}
+//
+//	public List<Longueur> getListeLongueurs() {
+//		return listeLongueurs;
+//	}
+//
+//	public void setListeLongueurs(List<Longueur> listeLongueurs) {
+//		this.listeLongueurs = listeLongueurs;
+//	}
+//
+//	public List<Commentaire> getListeCommentaires() {
+//		return listeCommentaires;
+//	}
+//
+//	public void setListeCommentaires(List<Commentaire> listeCommentaires) {
+//		this.listeCommentaires = listeCommentaires;
+//	}
+//
+//	public List<Topo> getListeTopos() {
+//		return listeTopos;
+//	}
+//
+//	public void setListeTopos(List<Topo> listeTopos) {
+//		this.listeTopos = listeTopos;
+//	}
+//
+//	public List<ReservationTopo> getListeReservationTopo() {
+//		return listeReservationTopo;
+//	}
+//
+//	public void setListeReservationTopo(List<ReservationTopo> listeReservationTopo) {
+//		this.listeReservationTopo = listeReservationTopo;
+//	}
 }

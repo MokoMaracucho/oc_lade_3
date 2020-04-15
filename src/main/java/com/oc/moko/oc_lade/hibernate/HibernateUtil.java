@@ -8,9 +8,11 @@ import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 //import org.hibernate.cfg.Configuration;
 //import org.hibernate.cfg.Environment;
 //import org.hibernate.service.ServiceRegistry;
+import org.springframework.context.annotation.Configuration;
 
 //import com.oc.moko.oc_lade.model.Utilisateur;
 

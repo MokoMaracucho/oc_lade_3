@@ -21,8 +21,28 @@ public class UtilisateurDataAccessService implements UtilisateurDao {
 	private static List<Utilisateur> listUtilisateurs = new ArrayList<>();
 
 	@Override
-	public int insertUtilisateur(UUID idUtilisateur, Utilisateur utilisateur) {
-		listUtilisateurs.add(new Utilisateur(idUtilisateur, utilisateur.getPrenomUtilisateur(), utilisateur.getNomUtilisateur()));
+	public int insertUtilisateur(
+			UUID idUtilisateur,
+			Utilisateur utilisateur
+	) {
+		listUtilisateurs.add(
+			new Utilisateur(
+				idUtilisateur,
+				utilisateur.getPrenomUtilisateur(),
+				utilisateur.getNomUtilisateur(),
+				utilisateur.getEmailUtilisateur(),
+				utilisateur.getMotDePasseUtilisateur(),
+				utilisateur.getPrivilegeUtilisateur(),
+				utilisateur.getDateInscriptionUtilisateur()
+//				utilisateur.getListeSites(),
+//				utilisateur.getListeSecteurs(),
+//				utilisateur.getListeVoies(),
+//				utilisateur.getListeLongueurs(),
+//				utilisateur.getListeCommentaires(),
+//				utilisateur.getListeTopos(),
+//				utilisateur.getListeReservationTopo()
+			)
+		);
 		return 1;
 	}
 
@@ -53,7 +73,25 @@ public class UtilisateurDataAccessService implements UtilisateurDao {
 		return selectUtilisateurById(idUtilisateur).map(utilisateur -> {
 			int indexOfUtilisateurToUpdate = listUtilisateurs.indexOf(utilisateur);
 			if(indexOfUtilisateurToUpdate >= 0) {
-				listUtilisateurs.set(indexOfUtilisateurToUpdate, new Utilisateur(idUtilisateur, utilisateurToUpdate.getPrenomUtilisateur(), utilisateurToUpdate.getNomUtilisateur()));
+				listUtilisateurs.set(
+					indexOfUtilisateurToUpdate, 
+					new Utilisateur(
+						idUtilisateur,
+						utilisateur.getPrenomUtilisateur(),
+						utilisateur.getNomUtilisateur(),
+						utilisateur.getEmailUtilisateur(),
+						utilisateur.getMotDePasseUtilisateur(),
+						utilisateur.getPrivilegeUtilisateur(),
+						utilisateur.getDateInscriptionUtilisateur()
+//						utilisateur.getListeSites(),
+//						utilisateur.getListeSecteurs(),
+//						utilisateur.getListeVoies(),
+//						utilisateur.getListeLongueurs(),
+//						utilisateur.getListeCommentaires(),
+//						utilisateur.getListeTopos(),
+//						utilisateur.getListeReservationTopo()
+					)
+				);
 				return 1;
 			}
 			return 0;
